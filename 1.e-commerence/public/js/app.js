@@ -1868,6 +1868,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["image_url", "price", "qty"]
 });
@@ -1892,7 +1893,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ["price", "qty"]
+  props: ["price", "qty"],
+  computed: {
+    actualPrice: function actualPrice() {
+      return this.price * this.qty;
+    }
+  }
 });
 
 /***/ }),
@@ -37481,9 +37487,11 @@ var render = function() {
           { attrs: { price: _vm.price, qty: _vm.qty } },
           [_vm._t("default")],
           2
-        )
+        ),
+        _vm._v(" "),
+        _vm._t("delete_form")
       ],
-      1
+      2
     )
   ])
 }
@@ -37513,7 +37521,14 @@ var render = function() {
     _c("div", [_vm._t("default")], 2),
     _vm._v(" "),
     _c("div", [
-      _vm._v(_vm._s(_vm.price) + " USD x " + _vm._s(_vm.qty) + " = xxx USD")
+      _vm._v(
+        _vm._s(_vm.price) +
+          " USD x " +
+          _vm._s(_vm.qty) +
+          " = " +
+          _vm._s(_vm.actualPrice) +
+          " USD"
+      )
     ])
   ])
 }
@@ -50644,8 +50659,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /media/thet/Data/PADC/PADC 9 - Laravel/Repo/Advance/Week 1 - Laravel/1.e-commerence/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /media/thet/Data/PADC/PADC 9 - Laravel/Repo/Advance/Week 1 - Laravel/1.e-commerence/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /media/thet/Data/PADC/PADC 9 - Laravel/Repo/Advance/Week 1 - Laravel [Recap - Collection - CSRF]/1.e-commerence/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /media/thet/Data/PADC/PADC 9 - Laravel/Repo/Advance/Week 1 - Laravel [Recap - Collection - CSRF]/1.e-commerence/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

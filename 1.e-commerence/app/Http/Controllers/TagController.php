@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Cart;
+use App\Tag;
 use Illuminate\Http\Request;
 
-class CartController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,23 +41,21 @@ class CartController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Cart  $cart$sum = $items->reduce(function($carry,$i){ return $carry + $i->product->price; });
+     * @param  \App\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show(Tag $tag)
     {
-        $customer = auth()->user();
-        $current_cart = $customer->active_cart;        
-        return view('cart.index',compact('current_cart'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Cart  $cart
+     * @param  \App\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cart $cart)
+    public function edit(Tag $tag)
     {
         //
     }
@@ -66,10 +64,10 @@ class CartController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Cart  $cart
+     * @param  \App\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cart $cart)
+    public function update(Request $request, Tag $tag)
     {
         //
     }
@@ -77,10 +75,10 @@ class CartController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Cart  $cart
+     * @param  \App\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cart $cart)
+    public function destroy(Tag $tag)
     {
         //
     }
