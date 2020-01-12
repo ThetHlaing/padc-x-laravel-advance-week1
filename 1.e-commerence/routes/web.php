@@ -13,7 +13,11 @@
 
 
 
-Auth::routes();
+ Auth::routes();
+Route::get('/logout',function(){
+    auth()->logout();
+    return "You are logged out";
+});
 
 
 Route::middleware('cart.check')->group(function(){

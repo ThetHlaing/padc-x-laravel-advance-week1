@@ -95,6 +95,10 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
+
+            <!-- <img src="http://localhost:8000/logout"/> -->
+
+            <form method="POST" action="http://localhost:8000/cart-item"><input type="hidden" name="_token" value="Dov3ooN2nWF41fd2Fy5oPu1XrRlIpXZw31Aj6OG1"> <input type="hidden" value="2" name="product_id"> <button type="submit" class="btn btn-primary">Login</button></form>
         </div>
     </body>
 </html>

@@ -15,4 +15,8 @@
         </template>
 </product-detail-holder>
 
+        @foreach($product->tags as $tag):
+                {{$tag->name}}
+        @endforeach
+
 @endsection
